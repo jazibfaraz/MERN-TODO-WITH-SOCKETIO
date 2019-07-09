@@ -14,6 +14,7 @@ class App extends React.Component {
     this.state = {
       data: [],
       isDisabled: false,
+      todoText: '',
     }
 
     this.addTodos = this.addTodos.bind(this);
@@ -59,7 +60,7 @@ class App extends React.Component {
 
   // cancelEdit() this function is just enabling the submit btn again and clearing the input field
   cancelEdit() {
-    const { isDisabled } = this.state;
+    const { isDisabled, todoText } = this.state;
     if (isDisabled === true) {
       this.todoInput.value = '';
       this.setState({ isDisabled: false });
