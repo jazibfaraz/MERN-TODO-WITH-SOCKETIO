@@ -27,7 +27,7 @@ class App extends React.Component {
 
     //eastablishing a connection on socket io
     // socket = io('http://localhost:4000');
-    socket = io(window.location.hostname + ':' + 4000)
+    socket = io(window.location.hostname)
     socket.on('connect', () => console.log('connected')
     )
 
