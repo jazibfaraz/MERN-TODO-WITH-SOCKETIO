@@ -1,7 +1,7 @@
 // const io = require('socket.io')();
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 let socket = require('socket.io');
 const Todo = require('../mongoDB/index')
 const todoController = require('../express/server')
