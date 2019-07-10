@@ -26,7 +26,8 @@ class App extends React.Component {
     this.cancelEdit = this.cancelEdit.bind(this);
 
     //eastablishing a connection on socket io
-    socket = io('http://localhost:4000');
+    // socket = io('http://localhost:4000');
+    socket = io('https://pacific-brushlands-37571.herokuapp.com/');
     socket.on('connect', () => console.log('connected')
     )
 
