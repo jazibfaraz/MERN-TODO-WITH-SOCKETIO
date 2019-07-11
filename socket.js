@@ -3,17 +3,17 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 4000;
 let socket = require('socket.io');
-const Todo = require('../mongoDB/index')
-const todoController = require('../express/server')
+const Todo = require('./src/config/mongoDB/index')
+const todoController = require('./src/config/express/server')
 
 const server = app.listen(port, () => console.log('server is listening on port: ' + port)
 )
 
 const io = socket(server);
 
-if (port === 'development') {
-    server = 'http://localhost:4000';
-}
+// if (port === 'development') {
+//     server = 'http://localhost:4000';
+// }
 
 io.on('connection', (socket) => {
     console.log('connection eastablished', socket.id)
