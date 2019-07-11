@@ -1,0 +1,1 @@
+web: node src/config/socket/socket.js
